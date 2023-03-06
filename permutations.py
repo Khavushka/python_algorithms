@@ -22,3 +22,6 @@ def permute(string, pocket = ""):
             permute(together,letter + pocket)
 
 print(permute("ABCD", ""))
+
+# N Queens Promlem
+# Real world example of permutations
