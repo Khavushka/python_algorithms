@@ -43,13 +43,33 @@ else:
 
 # Bubble sort
 # The bigger element to the top 
+# First solution
+def swap(element, i, j):
+    temp = element[i]
+    element[i] = element[j]
+    element[j] = temp
+
+# Second solution
 def bubbleSort(element):
     iterations = 0
     for i in range(len(element)):
         for j in range(len(element)-i-1):
             iterations += 1
             if element[j] > element[j+1]:
-                element[j], element[j+1] = element[j], element[j+1]
+                element[j], element[j+1] = element[j+1], element[j]
     return element, iterations
 element = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 print(bubbleSort(element))
+
+# Insertion sort
+def insert_sort(A):
+    for j in range(1, len(A)):
+        key = A[j]
+        i = j - 1
+        while i >= 0 and A[i] > key:
+            A[i +1] = A[i]
+            i -= 1
+        A[i +1] = key
+
+A = [8, 1, 2, 3, 4, 5, 6, 7]
+print(insert_sort(A))
