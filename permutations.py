@@ -25,3 +25,4 @@ print(permute("ABCD", ""))
 
 # N Queens Promlem
 # Real world example of permutations
+
