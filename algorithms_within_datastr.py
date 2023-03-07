@@ -40,3 +40,16 @@ if result != -1:
     print('Element is present at index %d' % result)
 else:
     print('Element is not present in array')
+
+# Bubble sort
+# The bigger element to the top 
+def bubbleSort(element):
+    iterations = 0
+    for i in range(len(element)):
+        for j in range(len(element)-i-1):
+            iterations += 1
+            if element[j] > element[j+1]:
+                element[j], element[j+1] = element[j], element[j+1]
+    return element, iterations
+element = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+print(bubbleSort(element))
