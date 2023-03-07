@@ -23,6 +23,6 @@ def permute(string, pocket = ""):
 
 print(permute("ABCD", ""))
 
-# N Queens Promlem
+# 8/N Queens Promlem: theory & explanation
 # Real world example of permutations
 
