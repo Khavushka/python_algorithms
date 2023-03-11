@@ -3,38 +3,39 @@
 
 # 2x2 matrix 'X'
 
-X = [[1,2],
-     [3,4]]
+# X = [[1,2],
+#      [3,4]]
 
-#  2x2 matrix 'Y'
-Y = [[2,3],
-     [3,4]]
+# #  2x2 matrix 'Y'
+# Y = [[2,3],
+#      [3,4]]
 
-# 2x2 matrix of '0', which added to our answer, gives the answer
-result = [[0,0],
-         [0,0]]
+# # 2x2 matrix of '0', which added to our answer, gives the answer
+# result = [[0,0],
+#          [0,0]]
 
-# iterate through rows of X
-for i in range(len(X)):
-    # iterate through columns of Y
-    for j in range(len(Y[0])):
-        # iterate through rows of Y
-        for k in range(len(Y)):
-            result[i][j] += X[i][k] * Y[k][j]
+# # iterate through rows of X
+# for i in range(len(X)):
+#     # iterate through columns of Y
+#     for j in range(len(Y[0])):
+#         # iterate through rows of Y
+#         for k in range(len(Y)):
+#             result[i][j] += X[i][k] * Y[k][j]
 
-for end in result:
-    print(end)
+# for end in result:
+#     print(end)
 
 '''
 German matrix multiplication 
 '''
+print("-------------")
 
 # Strassen algorithms
 
 import numpy as np
 
-x = np.array[[1,2],[2,3]]
-y = np.array[[2,3],[3,4]]
+x = np.array([[1,2],[2,3]])
+y = np.array([[2,3],[3,4]])
 
 def strassen_ite(x,y):
     
@@ -57,6 +58,6 @@ def strassen_ite(x,y):
     c3 = (p3 +p4)
     c4 = (p1 + p5 - p3 -p7)
 
-    return np.array([c1,c2],[c3,c4])
+    return np.array([[c1,c2],[c3,c4]])
 
 print(strassen_ite(x, y))
